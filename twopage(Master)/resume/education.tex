@@ -3,23 +3,20 @@
 %-------------------------------------------------------------------------------
 \cvsection{Education}
 
-
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
-\begin{cventries}
+\newcommand{\education}[4]{
+  & #1 & #2 & &#3 & #4
+}
 
 %---------------------------------------------------------
-  \cventry
-    {B.S. in Computer Science and Engineering} % Degree
-    {POSTECH(Pohang University of Science and Technology)} % Institution
-    {Pohang, S.Korea} % Location
-    {Mar. 2010 - Exp. Aug. 2017} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-        \item {Got a Chun Shin-Il Scholarship which is given to promising students in CSE Dept.}
-      \end{cvitems}
-    }
+
+\begin{tabular}{ | L{0.05cm} l | L{3cm} | L{0.05cm} C{8cm} | r |}
+  \hline
+  \education{\textbf{Year}}{\textbf{Degree}}{\textbf{Institution(Board)}}{\textbf{CGPA/\%}}\\
+  \hline
+  \education{July'16 -- Present}{B.Tech, CSE}{Indian Institute of Technology, Kanpur}{8.2/10.0}\\
+  \education{2016}{AISSCE -- XII}{Saint Josephs School, Kota (CBSE)}{95\%}\\
+  \education{2014}{AISSCE -- X}{Saint Pauls School, Kota (CBSE)}{94\%}\\
+  \hline
+\end{tabular}
 
 %---------------------------------------------------------
-\end{cventries}
