@@ -11,16 +11,32 @@
 
 %---------------------------------------------------------
   \cventry
-    {Summer Project, Prof. Subhajit Roy} % Role
-    {Kleener Klee: Improving Klee to work better for formatted input} % Event
+    {Research Project, Prof. Subhajit Roy} % Role
+    {InVaSion: Input Validation with Symbolic Execution} % Event
     {IIT Kanpur} % Location
-    {May 2018 - Present} % Date(s)
+    {May 2018 - Nov 2018} % Date(s)
     {
       \begin{cvitems} % Description(s)
-      \item {Worked on a symbolic execution tool “Klee” to tackle the problem of Path Explosion in order to increase code coverage.}
-        \item {Developed a framework to represent the formatted input as FSA to guide Klee.} 
-        \item {Developed a tool in Ruby to parse and compile the input FSA provided in xml to C code.}
-        \item {Increased code coverage by 80\% on the programs in Siemens Test Suite which require formatted input.}
+      \item {Worked on forking-based symbolic execution engines to tackle the problem of Path Explosion with goal of increasing code and branch coverage for programs requiring formatted inputs such image readers or video players.}
+      \item {Formulated a framework to represent the formatted input as a FSA, an input specification language (ISL) to be used by a software.}
+        \item {Developed a tool in Ruby to parse and compile the ISL, and appending this ISL to the input program, generating a set of logical constraints on execution by symbolic execution engine, with the goal of guiding symbolic execution tool to produce better inputs.}
+        \item {Improved branch coverage by greater than 150\% on the programs in Siemens Test Suite, MiBench and Tiff library which require formatted input.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+  \cventry
+    {Undergraduate Project, Prof. Debadatta Mishra} % Role
+    {Exploiting Binaries using Return Oriented Programming} % Event
+    {IIT Kanpur} % Location
+    {Jan 2019 - Apr 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Worked with x86\_64 binaries to invoke any particular syscall by performing static analysis and using concepts of Return Oriented Programming.}
+        \item {Developed a tool for building a ROP chain from ROP gadgets to exploit the 64-bit binaries by invoking a particular syscall.}
       \end{cvitems}
     }
 
@@ -32,13 +48,13 @@
     {Under Prof. Brendan Dolan-Gavitt and Prof. Subhajit Roy} % Role
     {Integrating bug synthesis into a bug finding competition} % Event
     {IIT Kanpur} % Location
-    {June 2018 - Present} % Date(s)
+    {June 2018 - Dec 2018} % Date(s)
     {
       \begin{cvitems} % Description(s)
-        \item {Worked on a Bug Injection Tool "Apocalypse" which injects bugs in C code which are difficult to locate by automated tools.}
-        \item {Implemented technique for crashing the buggy C programs we get from Apocalypse.}
-        \item {Implemented techniques to disguise the bugs to make it difficult for users to locate them.}
-        \item {Injected bugs in "grep" code based on the implemented techniques.}
+        \item {Worked on a Bug Injection Tool ``Apocalypse" used to inject bugs in C code which are difficult to locate by automated security verification tools.}
+        \item {Implemented techniques for crashing the buggy C programs from Apocalypse and at the same time disguise the bugs making it difficult for users to locate.}
+%        \item {Implemented techniques to disguise the bugs to make it difficult for users to locate them.}
+        \item {Injected bugs in ``grep" code based on the implemented techniques and found 50\% success rate in bug finding competition ``Rode0day".}
       \end{cvitems}
     }
 
@@ -47,18 +63,48 @@
 
 %---------------------------------------------------------
   \cventry
-    {Programming Club} % Role
-    {Ethical Hacking: Learnt Basic Exploits for participating in CTFs} % Event
+    {Course Project under Prof. Sandeep Shukla} % Role
+    {Certification: Issuing tamper-proof certificates} % Event
     {IIT Kanpur} % Location
-    {Summer'2017} % Date(s)
+    {Apr 2019} % Date(s)
     {
       \begin{cvitems} % Description(s)
-        \item {Learnt exploitation techniques like buffer-overflow, integer-overflow, format strings and heap exploits.}
-        \item {Used debuggers and knowledge of x86 Assembly language to exploit binary files.}
-        \item {Performed various web attacks like sql-injection, XSS and CSRF.}
-        \item {Learnt basics of Cryptography.}
+        \item {A Blockchain based service issuing certificates which once issued cannot be altered by anyone, accomplished by making the certificate part of the public \textit{Ethereum} blockchain.}
+        \item {The service works on a multi-level hierarchical system in which the instructor/manager can issue certificates for the students/employees and once issued, no one can alter them and anyone in the world can verify the certificates.}
       \end{cvitems}
     }
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+  \cventry
+    {Course Project under Prof. Amey Karkare} % Role
+    {PyGo: A compiler for Golang in Python} % Event
+    {IIT Kanpur} % Location
+    {Feb 2019 - Apr 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+      \item {Developed a compiler from scratch in \textit{Python} with source language as \textit{Golang} and target as \textit{x86\_32}.}
+      \item {PyGo supported all the basic features of Golang along with the advanced features such as optimizations, efficient register allocation, short circuiting, type checking and inference.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+%  \cventry
+%    {Programming Club} % Role
+%    {Ethical Hacking: Learnt Basic Exploits for participating in CTFs} % Event
+%    {IIT Kanpur} % Location
+%    {Summer'2017} % Date(s)
+%    {
+%      \begin{cvitems} % Description(s)
+%        \item {Learnt exploitation techniques like buffer-overflow, integer-overflow, format strings, heap exploits and basics of Cryptography.}
+%        \item {Analyzed and exploited x86 binaries using debuggers and knowledge of x86 Assembly language, and performed diverse web attacks like sql-injection, XSS and CSRF.}
+%      \end{cvitems}
+%    }
 
 %---------------------------------------------------------
 
@@ -68,11 +114,11 @@
     {Association of Computing Activities} % Role
     {Linux From Scratch: Compiled Linux System from Source and Built a Package Manager} % Event
     {IIT Kanpur} % Location
-    {Feb. 2017 - Apr. 2017} % Date(s)
+    {Feb 2017 - Apr 2017} % Date(s)
     {
       \begin{cvitems} % Description(s)
-        \item {Created a \textbf{Customized Linux} based operating system by compiling all packages from scratch using the host machine's kernel.}
-        \item {Built a \textbf{package manager} in python which fetched the dependencies of packages and created a dependency list based on packages installed.} 
+        \item {Created a ``Customized Linux" based operating system by compiling all packages from scratch using the host machine's kernel.}
+        \item {Built a ``Package Manager" in python which fetched the dependencies of packages and created a dependency list based on packages installed.} 
       \end{cvitems}
     }
 

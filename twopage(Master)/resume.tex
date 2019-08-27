@@ -26,6 +26,10 @@
 % Specify the location of the included fonts
 \fontdir[fonts/]
 
+% Custom Date configurations
+\usepackage{advdate}
+\newcommand{\yesterday}{{\AdvanceDate[-3]\today}}
+
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
@@ -41,7 +45,7 @@
 % \definecolor{lighttext}{HTML}{999999}
 
 % Set false if you don't want to highlight section with awesome color
-\setbool{acvSectionColorHighlight}{true}
+%\setbool{acvSectionColorHighlight}{true}
 
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
@@ -57,14 +61,14 @@
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo[rectangle,edge,right]{profile}
 \name{Ayush}{Bansal}
-\position{Third Year Undergraduate{\enskip\cdotp\enskip}Computer Science and Engineering}
-\address{Indian Institute of Technology}
+\position{Final Year Undergraduate{\enskip\cdotp\enskip}Computer Science and Engineering}
+\address{Indian Institute of Technology Kanpur}
 
 \mobile{(+91) 94625-45882}
 \email{ayushb268@gmail.com}
 %\homepage{www.posquit0.com}
 \github{ayush268}
-% \linkedin{ayush268}
+\linkedin{ayush268}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -82,7 +86,7 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
+  {\yesterday}
   {Ayush Bansal~~~·~~~Resume}
   {\thepage}
 
