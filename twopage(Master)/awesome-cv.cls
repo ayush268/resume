@@ -507,11 +507,11 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \par\addvspace{1.5ex}
+  \par%\addvspace{1.5ex}
   \phantomsection{}
   \sectionstyle{#1}
   \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak\addvspace{1ex}
+  \par\nobreak%\addvspace{1ex}
 }
 
 % Define a subsection for CV
@@ -547,7 +547,7 @@
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}
-  \vspace{-3.0mm}
+  \vspace{-4.1mm}
 }
 
 \newcommand*{\extraentry}[5]{%

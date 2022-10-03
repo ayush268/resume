@@ -11,16 +11,64 @@
 
 %---------------------------------------------------------
   \cventry
-    {Research Project, Prof. Subhajit Roy} % Role
-    {InVaSion: Input Validation with Symbolic Execution} % Event
+    {Under Prof. Satyadev Nandakumar} % Role
+    {\href{https://github.com/ayush268/InHs}{InHs}: An interpreter in Haskell} % Event
     {IIT Kanpur} % Location
-    {May 2018 - Nov 2018} % Date(s)
+    {Sept 2019 - Nov 2019} % Date(s)
     {
       \begin{cvitems} % Description(s)
-      \item {Worked on forking-based symbolic execution engines to tackle the problem of Path Explosion with goal of increasing code and branch coverage for programs requiring formatted inputs such image readers or video players.}
-      \item {Formulated a framework to represent the formatted input as a FSA, an input specification language (ISL) to be used by a software.}
-        \item {Developed a tool in Ruby to parse and compile the ISL, and appending this ISL to the input program, generating a set of logical constraints on execution by symbolic execution engine, with the goal of guiding symbolic execution tool to produce better inputs.}
-        \item {Improved branch coverage by greater than 150\% on the programs in Siemens Test Suite, MiBench and Tiff library which require formatted input.}
+      \item {Developed an interpreter from scratch in \textit{Haskell} interpreting a simple kernel language such as \textit{Oz}.}
+      \item {InHs supported all the basic features of a declarative sequential and concurrent language such as application of non-suspendable and suspendable statements, unification of variables and values, maintenance of a single assignment store and a semantic multi-stack.}
+      \item {InHs also extends the functionality of basic kernel languages to include features such as Lazy and concurrent executions via trigger store and Non-determinism using Wait Statement, IsDetermined Statement and Message passing model via mutable store.}
+      \end{cvitems}
+    }%\vspace*{-\baselineskip}
+
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+  %\cventry
+  %  {Under Prof. Brendan Dolan-Gavitt (NYU) and Prof. Subhajit Roy} % Role
+  %  {Integrating bug synthesis into a bug finding competition} % Event
+  %  {IIT Kanpur} % Location
+  %  {June 2018 - Dec 2018} % Date(s)
+  %  {
+  %    \begin{cvitems} % Description(s)
+  %      \item {Worked on a Bug Injection Tool ``Apocalypse" used to inject bugs in C code which are difficult to locate by automated security verification tools.}
+  %      \item {Implemented techniques for crashing the buggy C programs from Apocalypse and disguise the bugs rendering them to locate.}
+% %       \item {Implemented techniques to disguise the bugs to make it difficult for users to locate them.}
+  %      \item {Injected bugs in ``grep" code based on the implemented techniques and found 50\% success rate in bug finding competition \href{https://rode0day.mit.edu/results/4}{``Rode0day"}.}
+  %    \end{cvitems}
+  %  }
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+  \cventry
+    {Under Prof. Sandeep Shukla} % Role
+    {Certification: Issuing tamper-proof certificates} % Event
+    {IIT Kanpur} % Location
+    {Apr 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {A Blockchain based service issuing certificates which once issued cannot be altered by anyone, accomplished by making the hash of the certificate as part of the public \textit{Ethereum} blockchain rendering it easily accessible and verifiable by anyone in the world.}
+        \item {The service works on a multi-level hierarchical system in which the instructor/manager can issue certificates for the students/employees and once issued, no one can alter them and anyone in the world can verify the certificates, thus having a wide array of applications.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+
+
+%---------------------------------------------------------
+  \cventry
+    {Under Prof. Amey Karkare} % Role
+    {PyGo: A compiler for Golang in Python} % Event
+    {IIT Kanpur} % Location
+    {Feb 2019 - Apr 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+      \item {Developed a \textit{compiler from scratch in Python} with \textit{source language as Golang} and \textit{target as x86\_32}.}
+      \item {PyGo supported all the basic features of Golang along with the advanced features such as optimizations, efficient register allocation, short circuiting, type checking and inference.}
       \end{cvitems}
     }
 
@@ -45,50 +93,18 @@
 
 %---------------------------------------------------------
   \cventry
-    {Under Prof. Brendan Dolan-Gavitt and Prof. Subhajit Roy} % Role
-    {Integrating bug synthesis into a bug finding competition} % Event
+    {Research Project, Prof. Subhajit Roy} % Role
+    {InVaSion: Input Validation with Symbolic Execution} % Event
     {IIT Kanpur} % Location
-    {June 2018 - Dec 2018} % Date(s)
+    {May 2018 - Nov 2018} % Date(s)
     {
       \begin{cvitems} % Description(s)
-        \item {Worked on a Bug Injection Tool ``Apocalypse" used to inject bugs in C code which are difficult to locate by automated security verification tools.}
-        \item {Implemented techniques for crashing the buggy C programs from Apocalypse and at the same time disguise the bugs making it difficult for users to locate.}
-%        \item {Implemented techniques to disguise the bugs to make it difficult for users to locate them.}
-        \item {Injected bugs in ``grep" code based on the implemented techniques and found 50\% success rate in bug finding competition ``Rode0day".}
+      \item {Worked on forking-based symbolic execution engines to tackle the problem of Path Explosion with goal of increasing code and branch coverage for programs requiring formatted inputs such image readers or video players.}
+      \item {Formulated a framework to represent the formatted input as a FSA, an input specification language (ISL) to be used by a software.}
+        \item {Developed a tool in Ruby to parse and compile the ISL, and appending this ISL to the input program, generating a set of logical constraints on execution by symbolic execution engine, with the goal of guiding symbolic execution tool to produce better inputs.}
+        \item {Improved branch coverage by greater than 150\% on the programs in Siemens Test Suite, MiBench and Tiff library which require formatted input.}
       \end{cvitems}
-    }
-
-%---------------------------------------------------------
-
-
-%---------------------------------------------------------
-  \cventry
-    {Course Project under Prof. Sandeep Shukla} % Role
-    {Certification: Issuing tamper-proof certificates} % Event
-    {IIT Kanpur} % Location
-    {Apr 2019} % Date(s)
-    {
-      \begin{cvitems} % Description(s)
-        \item {A Blockchain based service issuing certificates which once issued cannot be altered by anyone, accomplished by making the certificate part of the public \textit{Ethereum} blockchain.}
-        \item {The service works on a multi-level hierarchical system in which the instructor/manager can issue certificates for the students/employees and once issued, no one can alter them and anyone in the world can verify the certificates.}
-      \end{cvitems}
-    }
-
-%---------------------------------------------------------
-
-
-%---------------------------------------------------------
-  \cventry
-    {Course Project under Prof. Amey Karkare} % Role
-    {PyGo: A compiler for Golang in Python} % Event
-    {IIT Kanpur} % Location
-    {Feb 2019 - Apr 2019} % Date(s)
-    {
-      \begin{cvitems} % Description(s)
-      \item {Developed a compiler from scratch in \textit{Python} with source language as \textit{Golang} and target as \textit{x86\_32}.}
-      \item {PyGo supported all the basic features of Golang along with the advanced features such as optimizations, efficient register allocation, short circuiting, type checking and inference.}
-      \end{cvitems}
-    }
+    }%\vspace{-4mm}
 
 %---------------------------------------------------------
 
@@ -117,8 +133,8 @@
     {Feb 2017 - Apr 2017} % Date(s)
     {
       \begin{cvitems} % Description(s)
-        \item {Created a ``Customized Linux" based operating system by compiling all packages from scratch using the host machine's kernel.}
-        \item {Built a ``Package Manager" in python which fetched the dependencies of packages and created a dependency list based on packages installed.} 
+        \item {Created a \textit{Customized Linux based operating system} by compiling all packages from scratch using the host machine's kernel.}
+        \item {Built a \textit{Package Manager} in python which fetched the dependencies of packages and created a dependency list based on packages installed.} 
       \end{cvitems}
     }
 
