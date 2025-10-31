@@ -62,6 +62,8 @@
 \RequirePackage{ifxetex}
 % Needed to use \if-\then-\else statement
 \RequirePackage{xifthen}
+% Needed to strip chars from telephone number
+\RequirePackage{xstring}
 % Needed to use a toolbox of programming tools
 \RequirePackage{etoolbox}
 % Needed to change line spacing in specific environment
@@ -75,6 +77,10 @@
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
 \RequirePackage{fontawesome}
+\RequirePackage{roboto}
+\RequirePackage[default,opentype]{sourcesanspro}
+% Needed for the photo ID
+\RequirePackage[skins]{tcolorbox}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
@@ -133,6 +139,7 @@
 \colorlet{text}{black}
 \colorlet{graytext}{darkgray}
 \colorlet{lighttext}{gray}
+\colorlet{sectiondivider}{gray}
 % Awesome colors
 \definecolor{awesome-emerald}{HTML}{00A388}
 \definecolor{awesome-skyblue}{HTML}{0395DE}
@@ -278,10 +285,19 @@
 
 % Defines writer's mobile (optional)
 % Usage: \mobile{<mobile number>}
-\newcommand*{\mobile}[1]{\def\@mobile{#1}}
+\newcommand*{\mobile}[1]
+{
+  \def\@mobile{#1}
+  \def\@teluri{tel:\@mobile}
+  % Strip unwanted characters
+  \StrDel{\@teluri}{ }[\@teluri]%
+  \StrDel{\@teluri}{-}[\@teluri]%
+  \StrDel{\@teluri}{(}[\@teluri]%
+  \StrDel{\@teluri}{)}[\@teluri]%
+}
 
 % Defines writer's email (optional)
-% Usage: \email{<email adress>}
+% Usage: \email{<email address>}
 \newcommand*{\email}[1]{\def\@email{#1}}
 
 % Defines writer's homepage (optional)
@@ -321,9 +337,24 @@
 % Usage: \xing{<xing name>}
 \newcommand*{\xing}[1]{\def\@xing{#1}}
 
+% Defines writer's google scholar profile (optional)
+% Usage: \googlescholar{<googlescholar userid>}{<googlescholar username>}
+% e.g.https://scholar.google.co.uk/citations?user=wpZDx1cAAAAJ
+% would be \googlescholar{wpZDx1cAAAAJ}{Name-to-display-next-icon}
+% If 'googlescholar-name' is not provided than it defaults to
+% '\firstname \lastname'
+\newcommand*{\googlescholar}[2]{%
+  \def\@googlescholarid{#1}%
+  \ifthenelse{\equal{#2}{}}{%
+    \def\@googlescholarname{\@firstname~\@lastname}%
+  }{%
+    \def\@googlescholarname{#2}%
+  }%
+}
+
 % Defines writer's twitter (optional)
-% Defines writer's extra informations (optional)
-% Usage: \extrainfo{<extra informations>}
+% Defines writer's extra information (optional)
+% Usage: \extrainfo{<extra information>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 
 % Defines writer's quote (optional)
@@ -401,7 +432,6 @@
   \textcolor{black}{\textbf{#1}}
 }
 
-
 %-------------------------------------------------------------------------------
 %                Commands for elements of CV structure
 %-------------------------------------------------------------------------------
@@ -419,7 +449,7 @@
       \ifthenelse{\isundefined{\@mobile}}%
         {}%
         {%
-          \faMobile\acvHeaderIconSep\@mobile%
+          \href{\@teluri}{\faMobile\acvHeaderIconSep\@mobile}%
           \setbool{isstart}{false}%
         }%
       \ifthenelse{\isundefined{\@email}}%
@@ -481,6 +511,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://www.xing.com/profile/\@xing}{\faXingSquare\acvHeaderIconSep\@xing}
+        }%
+      \ifthenelse{\isundefined{\@googlescholarid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://scholar.google.com/citations?user=\@googlescholarid}{\faGraduationCap\acvHeaderIconSep\@googlescholarname}%
         }%
       \ifthenelse{\isundefined{\@extrainfo}}%
         {}%
