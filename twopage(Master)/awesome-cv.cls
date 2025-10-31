@@ -652,7 +652,7 @@
   \vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
+    \setlength{\extrarowheight}{5pt}
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
       }{%
     \end{tabular*}
