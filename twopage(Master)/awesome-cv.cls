@@ -543,30 +543,34 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \par%\addvspace{1.5ex}
-  \phantomsection{}
+  \vspace{\acvSectionTopSkip}
   \sectionstyle{#1}
-  \color{gray}\vhrulefill{0.9pt}
-  \par\nobreak%\addvspace{1ex}
+  \phantomsection
+  \color{sectiondivider}\vhrulefill{0.9pt}
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
-  \phantomsection{}
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-3mm}
   \subsectionstyle{#1}
+  \phantomsection
 }
 
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
+  \vspace{\acvSectionContentTopSkip}
   \vspace{-3mm}
   \paragraphstyle
 }{%
-  \vspace{1mm}
+  \par
+  \vspace{2mm}
 }
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
+  \vspace{\acvSectionContentTopSkip}
   \begin{center}
 }{%
   \end{center}
@@ -574,6 +578,7 @@
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
+  %\vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{-1pt}
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
@@ -583,7 +588,7 @@
       \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}
-  \vspace{-4.1mm}
+  %\vspace{-4.1mm}
 }
 
 \newcommand*{\extraentry}[5]{%
@@ -596,7 +601,7 @@
     {\entrytitlestyle{#2} \entrypositionstyle{#1} & \entrylocationstyle{#4} \\}
     \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
   \end{tabular*}
-  \vspace{-3mm}
+  %\vspace{-3mm}
 }
 
 % Define an environment for cvsubentry
@@ -625,6 +630,8 @@
 
 % Define an environment for cvhonor
 \newenvironment{cvhonors}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2mm}
   \begin{center}
     \setlength\tabcolsep{0pt}
     \setlength{\extrarowheight}{0pt}
@@ -636,11 +643,13 @@
 % Define a line of cv information(honor, award or something else)
 % Usage: \cvhonor{<position>}{<title>}{<location>}{<date>}
 \newcommand*{\cvhonor}[4]{%
-  \honordatestyle{#4} & \honorpositionstyle{#1}, \honortitlestyle{#2} & \honorlocationstyle{#3} \\
+  \honordatestyle{#4} & \honorpositionstyle{#1}\ifempty{#2}{}{,} \honortitlestyle{#2} & \honorlocationstyle{#3} \\
 }
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
   \begin{center}
     \setlength\tabcolsep{1ex}
     \setlength{\extrarowheight}{0pt}
