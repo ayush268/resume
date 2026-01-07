@@ -19,9 +19,9 @@
     {
       \begin{cvitems} % Description(s) of tasks/responsibilities
       %\item Working on Low-Latency Networking, re-imagine the network stacks to adapt to different applications' needs, treating packets with varying performance goals (latency, throughput and reliability) as distinct traffic classes instead of treating all packets the same.
-      \item Worked on Low-Latency Networking, re-imagining the QoS (Quality of Service) of applications. End-host devices can significantly improve the QoS of applications without any support from the core network. Treating packets with heterogeneous performance goals differently on the end host leads to huge benefits in latency.
-      \item Developing a real-time query-able database system for satellite images, solving problems of communication and make it fast and cost-effective.
-      \item Worked on improving the usage of eBPF by bridging the language-verifier gap and analyzing the model of verifier using abstract interpretation.
+      %\item Worked on Low-Latency Networking, re-imagining the QoS (Quality of Service) of applications. End-host devices can significantly improve the QoS of applications without any support from the core network. Treating packets with heterogeneous performance goals differently on the end host leads to huge benefits in latency.
+      \item \textbf{My way or the PHY way}: Designed and implemented a novel application-aware rate control mechanism that optimizes per-packet Modulation and Coding Schemes (MCS) based on traffic intent (latency vs throughput). Reduced tail latency for real-time traffic by eliminating mandatory probing (10-15\% overhead) and exposing application semantics to the PHY/MAC layers.
+      \item Developed \textbf{Olympus}, a framework enabling real-time semantic search of satellite imagery via onboard-generated embeddings. By shifting from image-centric to representation-centric retrieval, the system reduces data downlink volume by 100x and supports direct, parallel semantic querying without processing raw image files.
       \end{cvitems}
     }
 
