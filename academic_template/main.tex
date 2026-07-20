@@ -1,0 +1,312 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar (template) — adapted for Ayush Bansal
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Ayush Bansal} \\ \vspace{5pt}
+    \small \faPhone* \hspace{2pt} \texttt{(+1) 341.529.6471} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:ayushb6@illinois.edu}{\texttt{ayushb6@illinois.edu}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/ayush268}{\texttt{ayush268}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------RESEARCH INTERESTS-----------
+\section{RESEARCH INTERESTS}
+  \vspace{4pt}
+  \small{Quantum Systems \hspace{4pt}$\cdot$\hspace{4pt} Distributed Systems \& Networking \hspace{4pt}$\cdot$\hspace{4pt} Operating Systems \hspace{4pt}$\cdot$\hspace{4pt} Cloud Computing}
+  \vspace{2pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Illinois Urbana-Champaign (UIUC)}{2024 -- Present}
+      {Ph.D. in Computer Science}{Urbana, Illinois}
+      \resumeItemListStart
+        \resumeItem{Working on \textbf{Quantum-Centric Supercomputing (QCSC)}, advised by \href{https://tianyin.github.io/}{\myuline{Prof. Tianyin Xu}}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Indian Institute of Technology Kanpur (IITK)}{2016 -- 2020}
+      {B.Tech. in Computer Science and Engineering \textnormal{(CGPA: 9.0/10.0)}}{Kanpur, India}
+      \resumeItemListStart
+        \resumeItem{Specialized in Systems (kernel, distributed systems, networking) and Programming Languages.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeSubheading
+        {Understanding and Fixing Bottlenecks in QCSC Pipelines}{Feb 2026 -- Present}
+        {Under Prof. Tianyin Xu and Dr. Apoorve Mohan}{UIUC}
+        \resumeItemListStart
+          \resumeItem{Build efficient \textbf{fault-tolerant QCSC pipelines} for stable fidelity with minimal quantum-classical resource usage.}
+          \resumeItem{Built a \textbf{QEM profiler} exposing multiple optimization dimensions in the Quantum Error Mitigation pipeline; designing an end-to-end \textbf{workflow manager} for quantum workloads over a shared HPC stack (CPUs, GPUs, QPUs).}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {\href{https://arxiv.org/abs/2312.03369}{My way or the PHY way}: Every Packet deserves the right MCS}{Jan 2025 -- July 2025}
+        {Under Prof. Brighten Godfrey and Prof. Matthew Caesar}{UIUC}
+        \resumeItemListStart
+          \resumeItem{Designed an \textbf{application-aware rate-control mechanism} optimizing per-packet Modulation and Coding Schemes (MCS) based on traffic intent (latency vs throughput).}
+          \resumeItem{Cut tail latency for real-time traffic by eliminating mandatory probing (10--15\% overhead) used in algorithms like Linux Minstrel, exposing application semantics to the PHY/MAC layers.}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Olympus: Semantic query framework for satellite imagery}{Jan 2025 -- Dec 2025}
+        {Under Prof. Indranil Gupta}{UIUC}
+        \resumeItemListStart
+          \resumeItem{Engineered a \textbf{real-time semantic query framework} for satellite imagery, shifting from image-centric to representation-centric retrieval.}
+          \resumeItem{Integrated geospatial foundation models (SatlasNet) for onboard embeddings, achieving a \textbf{100x downlink reduction} and enabling direct parallel querying without image access.}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Siebel School of Computing and Data Science, UIUC}{Aug 2024 -- Present}
+      {Graduate Research Assistant}{Urbana, Illinois}
+      \resumeItemListStart
+        \resumeItem{Research on \textbf{Quantum-Centric Supercomputing}: co-designing quantum-classical systems that schedule quantum workloads across CPUs, GPUs, and QPUs to maximize fidelity at least resource cost.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freelance: Venture Capital \& Startups}{Jan 2023 -- Aug 2024}
+      {Advisor \& Consultant}{Remote}
+      \resumeItemListStart
+        \resumeItem{Served as a \textbf{deeptech expert} evaluating deals for institutional \& micro VC funds; advised startups on technical architecture, product, and hiring.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {NimbleEdge}{Mar 2021 -- Feb 2024}
+      {Co-Founder and Chief Technology Officer}{Bangalore, India}
+      \resumeItemListStart
+        \resumeItem{Raised a \textbf{\$3.3M pre-seed} (Neotribe Ventures, Sistema Asia Capital) and built the entire technology org, migrating compute from the cloud to edge devices.}
+        \resumeItem{Onboarded \textbf{OYO, Dream11 \& Glance (InMobi)} as clients (each 100M+ MAUs); built a P2P SDK and aggregation infrastructure scaling to hundreds of millions of devices.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Tower Research Capital}{Aug 2020 -- Mar 2021}
+      {Low Latency Software Developer}{Gurgaon, India}
+      \resumeItemListStart
+        \resumeItem{Owned the firm-wide \textbf{Trade Reconciliation System} across all markets, ensuring correct functioning of the \textbf{trading platform} and handling \textbf{network/FPGA} errors; extended it to Taiwan Futures and crypto exchanges (FTX, Huobi).}
+        \resumeItem{Built low-latency C++/Python \textbf{simulation software} to test trading strategies against custom in-house exchanges on historical market data.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Core Engineering, Tower Research Capital}{May 2019 -- July 2019}
+      {Software Developer Intern}{Gurgaon, India}
+      \resumeItemListStart
+        \resumeItem{Containerized and automated the Trade Reconciliation setup as \textbf{microservices} on bare-metal Kubernetes.}
+        \resumeItem{Built low-latency C++ software inducing deterministic mutations on the network stream to simulate \textbf{trading-platform} and \textbf{FPGA} failure scenarios; earned a \textbf{Pre-Placement Offer} out of $\sim$35 interns.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {InterviewVector}{June 2020 -- Aug 2020}
+      {Co-Founder and Chief Technology Officer}{Gurgaon, India}
+      \resumeItemListStart
+        \resumeItem{Created the \textbf{Interview-as-a-Service} category; signed \textbf{10+ clients} (BharatPe, MindTickle) and bootstrapped to \textbf{\$170K ARR in 4 months}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Eightfold.ai}{Apr 2020 -- June 2020}
+      {Software Developer Intern}{Noida, India}
+      \resumeItemListStart
+        \resumeItem{Built the Alert Management System and set up BDD testing with Selenium, cutting test-suite runtime from \textbf{62 to $<$10 minutes (84\%)}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Google Summer of Code — OpenPrinting, The Linux Foundation}{May 2018 -- Aug 2018}
+      {Open Source Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed a Common Print Dialog backend serving all available print queues (CUPS, Google Cloud Print) over D-Bus.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+  \resumeSubHeadingListStart
+    \resumeItem{\textbf{Rex: Closing the language-verifier gap with safe and usable kernel extensions.} Jinghao Jia, Ruowen Qin, Milo Craun, Egor Lukiyanov, \textbf{Ayush Bansal}, Michael V. Le, Hubertus Franke, Hani Jamjoom, Tianyin Xu, Dan Williams. \textit{USENIX Annual Technical Conference (ATC '25)}.}
+  \resumeSubHeadingListEnd
+
+%-----------ACADEMIC SERVICE-----------
+\section{ACADEMIC SERVICE}
+  \resumeSubHeadingListStart
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{Artifact Evaluation Committee} & {\color{dark-grey}\small Aug 2024 -- Present} \\
+    \end{tabular*}\vspace{-4pt}
+    \resumeItemListStart
+      \resumeItem{OSDI '25 \hspace{2pt}$\cdot$\hspace{2pt} USENIX ATC '25 \hspace{2pt}$\cdot$\hspace{2pt} SOSP '25 \hspace{2pt}$\cdot$\hspace{2pt} ACM SIGCOMM '25 \hspace{2pt}$\cdot$\hspace{2pt} EuroSys '26.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------HONORS & AWARDS-----------
+\section{HONORS \& AWARDS}
+  \resumeSubHeadingListStart
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small \textbf{NSDI Student Grant Award} --- travel grant to attend the conference & {\color{dark-grey}\small 2025} \\[2pt]
+      \small \textbf{Academic Excellence Award} --- exceptional academic performance, 3 consecutive years (IITK) & {\color{dark-grey}\small 2020} \\[2pt]
+      \small \textbf{Exceptional Course Tutor} --- rated exceptionally by students, AY 2019--20 (IITK) & {\color{dark-grey}\small 2019} \\[2pt]
+      \small \textbf{JEE Advanced} --- All India Rank 187 out of 200,000 candidates & {\color{dark-grey}\small 2016} \\[2pt]
+      \small \textbf{KVPY Scholarship} --- All India Rank 52 (IISc \& Government of India) & {\color{dark-grey}\small 2016} \\[2pt]
+      \small \textbf{JEE Mains} --- All India Rank 571 out of 1.5 million candidates & {\color{dark-grey}\small 2016} \\[2pt]
+      \small \textbf{Indian National Chemistry Olympiad} --- Merit Certificate, National Top 1\% & {\color{dark-grey}\small 2015} \\[2pt]
+      \small \textbf{Indian National Astronomy Olympiad} --- Merit Certificate, National Top 1\% & {\color{dark-grey}\small 2015} \\[2pt]
+    \end{tabular*}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: C/C++, Python, Golang, Scala, Rust, JavaScript/TypeScript, Haskell, Ruby, Java, Verilog}\vspace{2pt} \\
+     \textbf{Web}       {: Akka (Scala), Gin (Golang), Node.js, React, Flask, Ruby on Rails, Django}\vspace{2pt} \\
+     \textbf{Utilities} {: Docker, Kubernetes, eBPF, Ansible, AWS, Azure, Kafka, GDB, Postgres, MySQL, MongoDB, \LaTeX}\vspace{2pt} \\
+     \textbf{Quantum}   {: Qiskit (IBM Quantum), Stim, Munich Quantum Toolkit (MQT), Cirq (Google Quantum AI)}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
