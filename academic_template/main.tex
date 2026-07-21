@@ -24,9 +24,6 @@
 % fontawesome
 \usepackage{fontawesome5}
 
-% fixed width
-\usepackage[scale=0.90,lf]{FiraMono}
-
 % light-grey
 \definecolor{light-grey}{gray}{0.83}
 \definecolor{dark-grey}{gray}{0.3}
@@ -46,10 +43,8 @@
 }
 
 
-% custom font: helvetica-style
-\usepackage{tgheros}
-\renewcommand*\familydefault{\sfdefault}
-%% Only if the base font of the document is to be sans serif
+% custom font: Times New Roman
+\usepackage{mathptmx}
 \usepackage[T1]{fontenc}
 
 
@@ -123,7 +118,7 @@
 % CHANGED default leftmargin  0.15 in
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \color{text-grey}
@@ -136,17 +131,31 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge Ayush Bansal} \\ \vspace{5pt}
+    \textbf{\Large Ayush Bansal} \\ \vspace{5pt}
     \small \faPhone* \hspace{2pt} \texttt{(+1) 341.529.6471} \hspace{1pt} $|$
     \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:ayushb6@illinois.edu}{\texttt{ayushb6@illinois.edu}} \hspace{1pt} $|$
     \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/ayush268}{\texttt{ayush268}}
     \\ \vspace{-3pt}
 \end{center}
 
-%-----------RESEARCH INTERESTS-----------
-\section{RESEARCH INTERESTS}
+%-----------SUMMARY-----------
+\section{SUMMARY}
   \vspace{4pt}
-  \small{Quantum Systems \hspace{4pt}$\cdot$\hspace{4pt} Distributed Systems \& Networking \hspace{4pt}$\cdot$\hspace{4pt} Operating Systems \hspace{4pt}$\cdot$\hspace{4pt} Cloud Computing}
+  \small{Ph.D. student at UIUC working at the intersection of \textbf{quantum systems} and classical HPC infrastructure.
+  My research focuses on \textbf{Quantum-Centric Supercomputing (QCSC)} -- co-designing the software stack that schedules
+  quantum workloads across CPUs, GPUs, and QPUs. My current emphasis is on making \textbf{Quantum Error Correction (QEC)}
+  pipelines efficient enough for \textbf{real-time} operation. I bring a strong systems background spanning
+  \textbf{operating systems}, distributed systems, \textbf{low-latency FPGA}-based trading infrastructure, and
+  \textbf{real-time systems}, which informs how I reason about the classical compute bottlenecks.}
+  \vspace{4pt}
+  \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: C/C++, Python, Golang, Scala, Rust, JavaScript/TypeScript, Haskell, Ruby, Java, Verilog}\vspace{2pt} \\
+     \textbf{Web}       {: Akka (Scala), Gin (Golang), Node.js, React, Flask, Ruby on Rails, Django}\vspace{2pt} \\
+     \textbf{Utilities} {: Docker, Kubernetes, eBPF, Ansible, AWS, Azure, Kafka, GDB, SQL, MongoDB, \LaTeX, Xilinx ISE, Xilinx Vivado}\vspace{2pt} \\
+     \textbf{Quantum}   {: Qiskit (IBM Quantum), Stim, Munich Quantum Toolkit (MQT), Cirq (Google Quantum AI)}
+    }}
+  \end{itemize}
   \vspace{2pt}
 
 %-----------EDUCATION-----------
@@ -154,17 +163,11 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Illinois Urbana-Champaign (UIUC)}{2024 -- Present}
-      {Ph.D. in Computer Science}{Urbana, Illinois}
-      \resumeItemListStart
-        \resumeItem{Working on \textbf{Quantum-Centric Supercomputing (QCSC)}, advised by \href{https://tianyin.github.io/}{\myuline{Prof. Tianyin Xu}}.}
-      \resumeItemListEnd
+      {Ph.D. in Computer Science \textnormal{(CGPA: 4.0/4.0)} (advisor: \href{https://tianyin.github.io/}{\myuline{Prof. Tianyin Xu}})}{Urbana, Illinois}
 
     \resumeSubheading
       {Indian Institute of Technology Kanpur (IITK)}{2016 -- 2020}
       {B.Tech. in Computer Science and Engineering \textnormal{(CGPA: 9.0/10.0)}}{Kanpur, India}
-      \resumeItemListStart
-        \resumeItem{Specialized in Systems (kernel, distributed systems, networking) and Programming Languages.}
-      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -172,27 +175,34 @@
     \resumeSubHeadingListStart
 
       \resumeSubheading
-        {Understanding and Fixing Bottlenecks in QCSC Pipelines}{Feb 2026 -- Present}
-        {Under Prof. Tianyin Xu and Dr. Apoorve Mohan}{UIUC}
+        {Improving Relay-BP Performance using RL}{May 2026 -- Present}
+        {Dr. Apoorve Mohan and Dr. Shraddha Singh}{IBM}
         \resumeItemListStart
-          \resumeItem{Build efficient \textbf{fault-tolerant QCSC pipelines} for stable fidelity with minimal quantum-classical resource usage.}
-          \resumeItem{Built a \textbf{QEM profiler} exposing multiple optimization dimensions in the Quantum Error Mitigation pipeline; designing an end-to-end \textbf{workflow manager} for quantum workloads over a shared HPC stack (CPUs, GPUs, QPUs).}
+          \resumeItem{Relay-BP is state-of-the-art for qLDPC codes but is highly sensitive to configuration ($\gamma$) parameters; our goal is to train a RL agent to dynamically set ($\gamma$) parameters based on the syndrome data stream in real-time to achieve faster convergence and improve accuracy.}
+          \resumeItem{Analysing syndrome datasets from Stim resembling real noise; observed inter-syndrome correlations suggesting learnable patterns.}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Understanding Classical Resource requirements for QCSC pipelines}{Feb 2026 -- Present}
+        {Prof. Tianyin Xu and Dr. Apoorve Mohan}{UIUC}
+        \resumeItemListStart
+          \resumeItem{Built a QEM profiler exposing multiple optimization dimensions in the Quantum Error Mitigation pipeline; designing an end-to-end workflow manager for quantum workloads over a shared HPC stack (CPUs, GPUs, QPUs).}
         \resumeItemListEnd
 
       \resumeSubheading
         {\href{https://arxiv.org/abs/2312.03369}{My way or the PHY way}: Every Packet deserves the right MCS}{Jan 2025 -- July 2025}
-        {Under Prof. Brighten Godfrey and Prof. Matthew Caesar}{UIUC}
+        {Prof. Brighten Godfrey and Prof. Matthew Caesar}{UIUC}
         \resumeItemListStart
-          \resumeItem{Designed an \textbf{application-aware rate-control mechanism} optimizing per-packet Modulation and Coding Schemes (MCS) based on traffic intent (latency vs throughput).}
+          \resumeItem{Designed an application-aware rate-control mechanism optimizing per-packet MCS based on traffic intent (latency vs throughput).}
           \resumeItem{Cut tail latency for real-time traffic by eliminating mandatory probing (10--15\% overhead) used in algorithms like Linux Minstrel, exposing application semantics to the PHY/MAC layers.}
         \resumeItemListEnd
 
       \resumeSubheading
         {Olympus: Semantic query framework for satellite imagery}{Jan 2025 -- Dec 2025}
-        {Under Prof. Indranil Gupta}{UIUC}
+        {Prof. Indranil Gupta}{UIUC}
         \resumeItemListStart
-          \resumeItem{Engineered a \textbf{real-time semantic query framework} for satellite imagery, shifting from image-centric to representation-centric retrieval.}
-          \resumeItem{Integrated geospatial foundation models (SatlasNet) for onboard embeddings, achieving a \textbf{100x downlink reduction} and enabling direct parallel querying without image access.}
+          \resumeItem{Engineered a real-time semantic query framework for satellite imagery, shifting image-centric retrieval to representation-centric.}
+          \resumeItem{Integrated geospatial foundation models (SatlasNet) for onboard embeddings, achieving a 100x downlink reduction and enabling direct parallel querying without image access.}
         \resumeItemListEnd
 
     \resumeSubHeadingListEnd
@@ -202,48 +212,50 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
+      {International Business Machines (IBM)}{May 2026 -- Present}
+      {Research Extern}{Yorktown Heights, NY}
+      \resumeItemListStart
+        %TODO
+        \resumeItem{Research on real-time Quantum Error Correction: improving QEC decoding by developing a framework to configure the relay-bp decoder in real-time based on incoming syndrome data stream from the quantum system.}
+      \resumeItemListEnd
+
+    \resumeSubheading
       {Siebel School of Computing and Data Science, UIUC}{Aug 2024 -- Present}
       {Graduate Research Assistant}{Urbana, Illinois}
       \resumeItemListStart
-        \resumeItem{Research on \textbf{Quantum-Centric Supercomputing}: co-designing quantum-classical systems that schedule quantum workloads across CPUs, GPUs, and QPUs to maximize fidelity at least resource cost.}
+        \resumeItem{Research on Quantum-Centric Supercomputing: co-designing quantum-classical systems that schedule quantum workloads across CPUs, GPUs, and QPUs to maximize fidelity at least resource cost.}
       \resumeItemListEnd
 
     \resumeSubheading
       {NimbleEdge}{Mar 2021 -- Feb 2024}
       {Co-Founder and Chief Technology Officer}{Bangalore, India}
       \resumeItemListStart
-        \resumeItem{Raised a \textbf{\$3.3M pre-seed} (Neotribe Ventures, Sistema Asia Capital) and built the entire technology org, migrating compute from the cloud to edge devices.}
-        \resumeItem{Onboarded \textbf{OYO, Dream11 \& Glance (InMobi)} as clients (each 100M+ MAUs); built a P2P SDK and aggregation infrastructure scaling to hundreds of millions of devices.}
+        \resumeItem{Raised a \$3.3M pre-seed (Neotribe Ventures, Sistema Asia Capital) and built the entire technology org, migrating compute from the cloud to edge devices.}
+        \resumeItem{Onboarded OYO, Dream11 \& Glance (InMobi) as clients (each 100M+ MAUs); built a P2P SDK and aggregation infrastructure scaling to hundreds of millions of devices.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Tower Research Capital}{Aug 2020 -- Mar 2021}
       {Low Latency Software Developer}{Gurgaon, India}
       \resumeItemListStart
-        \resumeItem{Owned the firm-wide \textbf{Trade Reconciliation System} across all markets, ensuring correct functioning of the \textbf{trading platform} and handling \textbf{network/FPGA} errors; extended it to Taiwan Futures and crypto exchanges (FTX, Huobi).}
-        \resumeItem{Built low-latency C++/Python \textbf{simulation software} to test trading strategies against custom in-house exchanges on historical market data.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Core Engineering, Tower Research Capital}{May 2019 -- July 2019}
-      {Software Developer Intern}{Gurgaon, India}
-      \resumeItemListStart
-        \resumeItem{Containerized and automated the Trade Reconciliation setup as \textbf{microservices} on bare-metal Kubernetes.}
-        \resumeItem{Built low-latency C++ software inducing deterministic mutations on the network stream to simulate \textbf{trading-platform} and \textbf{FPGA} failure scenarios; earned a \textbf{Pre-Placement Offer} out of $\sim$35 interns.}
+        \resumeItem{Started as an Intern, earned a Pre-Placement Offer and continued as a full-time engineer.}
+        \resumeItem{Owned the firm-wide Trade Reconciliation System across all markets, ensuring correct functioning of the trading platform and handling FPGA \& network errors; extended it to Taiwan Futures and crypto exchanges (FTX, Huobi).}
+        \resumeItem{Containerized and automated the Trade Reconciliation setup as microservices on bare-metal Kubernetes.}
+        \resumeItem{Built low-latency C++ software inducing deterministic mutations on the network stream to simulate trading-platform and FPGA failure scenarios significantly reducing production incidents and potentially saving millions of dollars.}
       \resumeItemListEnd
 
     \resumeSubheading
       {InterviewVector}{June 2020 -- Aug 2020}
       {Co-Founder and Chief Technology Officer}{Gurgaon, India}
       \resumeItemListStart
-        \resumeItem{Created the \textbf{Interview-as-a-Service} category; signed \textbf{10+ clients} (BharatPe, MindTickle) and bootstrapped to \textbf{\$170K ARR in 4 months}.}
+        \resumeItem{Created Interview-as-a-Service category; signed 10+ clients (BharatPe, MindTickle) and bootstrapped to \$170K ARR in 4 months.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Eightfold.ai}{Apr 2020 -- June 2020}
       {Software Developer Intern}{Noida, India}
       \resumeItemListStart
-        \resumeItem{Built the Alert Management System and set up BDD testing with Selenium, cutting test-suite runtime from \textbf{62 to $<$10 minutes (84\%)}.}
+        \resumeItem{Built the Alert Management System \& set up BDD testing with Selenium, cutting test-suite runtime from 62 to $<$10 minutes (84\%).}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -288,18 +300,6 @@
       \small \textbf{Indian National Astronomy Olympiad} --- Merit Certificate, National Top 1\% & {\color{dark-grey}\small 2015} \\[2pt]
     \end{tabular*}
   \resumeSubHeadingListEnd
-
-%-----------SKILLS-----------
-\section{SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{Languages} {: C/C++, Python, Golang, Scala, Rust, JavaScript/TypeScript, Haskell, Ruby, Java, Verilog}\vspace{2pt} \\
-     \textbf{Web}       {: Akka (Scala), Gin (Golang), Node.js, React, Flask, Ruby on Rails, Django}\vspace{2pt} \\
-     \textbf{Utilities} {: Docker, Kubernetes, eBPF, Ansible, AWS, Azure, Kafka, GDB, Postgres, MySQL, MongoDB, \LaTeX}\vspace{2pt} \\
-     \textbf{Quantum}   {: Qiskit (IBM Quantum), Stim, Munich Quantum Toolkit (MQT), Cirq (Google Quantum AI)}
-    }}
- \end{itemize}
-
 
 %-------------------------------------------
 \end{document}
